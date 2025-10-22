@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Bem-Vindo a nossa ONG</h1>
+        <nav class="menu-horizontal">
+            <ul class="menu-lista">
+                <li><a class="menu-link" href="index.html">Inicio</a></li>
+                <li><a class="menu-link" href="projeto.html">Projeto</a></li>
+                <li><a class="menu-link" href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="produto-card">
+            <h2>Cadastro</h2><br>
+            <p>Por favor, preencha o formulário abaixo para se cadastrar em nossa ONG:</p><br>
+
+            <form action="#" method="post" class="formulario">
+                <fieldset>
+                    <legend>Formulário de Cadastro</legend><br>
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" class="campo" id="nome" name="nome" placeholder="coloque seu nome completo"
+                        required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" class="campo" name="email" placeholder="exemplo@provedor.com"
+                        required><br><br>
+
+                    <label for="cpf">CPF:</label><br>
+                    <input type="text" id="cpf" name="cpf" class="campo" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                        placeholder="000.000.000-00" title="Formato: 000.000.000-00"><br><br>
+
+                    <label for="telefone">Telefone:</label><br>
+                    <input type="tel" class="campo" id="telefone" name="telefone"
+                        pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(xx) xxxxx-xxxx"
+                        title="Formato: (00) 00000-0000"><br><br>
+
+                    <label for="nascimento">Data de Nascimento:</label><br>
+                    <input type="date" id="nascimento" class="campo" name="nascimento">
+                </fieldset>
+                <fieldset>
+                    <legend>Endereço</legend>
+
+                    <label for="endereco">Endereço:</label><br>
+                    <input type="text" id="endereco" name="endereco" placeholder="Rua, Avenida, etc." required
+                        class="campo"><br><br>
+
+                    <label for="cep">CEP:</label><br>
+                    <input type="text" id="cep" name="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000"
+                        title="Formato: 00000-000" class="campo"><br><br>
+
+                    <label for="cidade">Cidade:</label><br>
+                    <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required
+                        class="campo"><br><br>
+
+                    <label for="estado">Estado:</label> <br>
+                    <input type="text" id="estado" name="estado" placeholder="Seu estado" required
+                        class="campo"><br><br>
+
+                    <input type="submit" value="Enviar" class="botao">
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
