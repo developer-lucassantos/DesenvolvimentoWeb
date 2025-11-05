@@ -1,0 +1,62 @@
+/* ========================================================= */
+/* Botões com Estados Visuais */
+/* ========================================================= */
+
+.botao, [type="submit"], [type="reset"] {
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: var(--fs-base);
+    font-weight: bold;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed), transform var(--transition-speed);
+    line-height: 1; 
+}
+
+/* Botão Primário (Padrão) */
+.botao, [type="submit"] {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Estado: Hover */
+.botao:hover:not(:disabled), [type="submit"]:hover:not(:disabled) {
+    background-color: #1565c0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estado: Active */
+.botao:active:not(:disabled), [type="submit"]:active:not(:disabled) {
+    background-color: #0d47a1; 
+    transform: translateY(1px);
+}
+
+/* Estado: Focus (Acessibilidade) */
+.botao:focus, [type="submit"]:focus, .botao-secondary:focus {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+/* Botão Secundário */
+.botao-secondary, [type="reset"] {
+    background-color: var(--color-secondary);
+    color: var(--color-neutral-dark);
+}
+
+.botao-secondary:hover:not(:disabled), [type="reset"]:hover:not(:disabled) {
+    background-color: #ffb300;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estado: Disabled */
+.botao:disabled, [type="submit"]:disabled, .botao-secondary:disabled, [type="reset"]:disabled {
+    background-color: var(--color-neutral-medium);
+    color: #bdbdbd;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}

@@ -1,0 +1,61 @@
+/* ========================================================= */
+/* Formulários Estilizados com Validação Visual */
+/* ========================================================= */
+
+.formulario {
+    display: block;
+}
+
+.formulario fieldset {
+    border: 1px solid var(--color-neutral-medium);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    border-radius: var(--border-radius);
+}
+
+.formulario legend {
+    font-size: var(--fs-lg);
+    color: var(--color-primary);
+    padding: 0 var(--space-xs);
+    font-weight: bold;
+}
+
+.formulario label {
+    display: block;
+    font-weight: bold;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-xs);
+    font-size: var(--fs-sm);
+}
+
+.campo {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid var(--color-neutral-medium);
+    border-radius: var(--border-radius);
+    font-size: var(--fs-base);
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.campo:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.25);
+    outline: none;
+}
+
+/* Validação Visual: Campos Válidos/Inválidos */
+.campo:valid:not(:placeholder-shown):not([type="submit"]) {
+    border: 1px solid var(--color-success);
+}
+
+.campo:invalid:not(:placeholder-shown):not([type="submit"]) {
+    border: 1px solid var(--color-accent);
+}
+
+/* Contêiner para botões de ação do formulário (Flexbox) */
+.form-actions {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+    flex-wrap: wrap;
+}

@@ -4,60 +4,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Início</title>
+  <title>Projeto</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
   <header class="header">
+    <div class="container header-content">
+      <h1>Bem-vindo à nossa ONG</h1>
+      
+      <input type="checkbox" id="menu-toggle" aria-controls="menu-horizontal-nav" aria-expanded="false" class="sr-only">
+      <label for="menu-toggle" class="hamburger-icon" aria-label="Abrir menu de navegação">
+          <i class="fas fa-bars"></i>
+      </label>
 
-    <h1>Bem-vindo à nossa ONG</h1>
-    <nav class="menu-horizontal">
-      <ul class="menu-lista">
-        <li><a class="menu-link" href="index.html">Início</a></li>
-        <li><a class="menu-link" href="projeto.html">Projeto</a></li>
-        <li><a class="menu-link" href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
-    
+      <nav class="menu-horizontal" id="menu-horizontal-nav">
+        <ul class="menu-lista">
+          <li><a class="menu-link" href="index.html">Início</a></li>
+          <li class="has-submenu">
+              <a class="menu-link" href="#">Apoie</a>
+              <ul class="submenu-lista">
+                  <li><a href="donate.html" class="menu-link">Doação</a></li>
+                  <li><a href="voluntario.html" class="menu-link">Voluntariado</a></li>
+              </ul>
+          </li>
+          <li><a class="menu-link" href="projeto.html">Projeto</a></li>
+          <li><a class="menu-link" href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="produto-card">
-      <h2>Projetos em Andamento</h2>
-      <p>
-        Estamos atualmente desenvolvendo vários projetos focados em inclusão social por meio do esporte e da
-        educação.<br>
-        Nossos programas incluem aulas de futebol para crianças e adolescentes, oficinas de arte e cultura,
-        além de atividades de reforço escolar.
-      </p>
-      <picture>
-        <img src="imagens/projeto.png" alt="Crianças jogando futebol" width="500" height="400" class="foto">
-      </picture>
-    </section>
+  <main class="container">
+    <div class="grid-12-col"> 
 
-    <section class="produto-card">
-      <h2>Como Participar</h2>
-      <p>
-        Se você deseja se envolver com nossos projetos, seja como voluntário ou participante, entre em contato
-        conosco através do formulário de cadastro na página
-        <a href="cadastro.html">Cadastro</a>.<br>
-        Ou colabore com nosso projeto, fazendo uma <a href="donate.html">doação</a>.
-      </p>
-    </section>
+      <section class="produto-card col-span-12 col-span-md-6 col-span-lg-4">
+        <h2>Projetos em Andamento</h2>
+        <p>
+          <span class="tag tag-primary">Esporte</span>
+          <span class="tag tag-secondary">Educação</span>
+          <span class="tag tag-success">Inclusão</span>
+          <br><br>
+          Estamos atualmente desenvolvendo vários projetos focados em inclusão social por meio do esporte e da
+          educação. Nossos programas incluem aulas de futebol para crianças e adolescentes, oficinas de arte e cultura,
+          além de atividades de reforço escolar.
+        </p>
+        <picture>
+          <img src="imagens/projeto.png" alt="Crianças jogando futebol" width="500" height="400" class="foto">
+        </picture>
+        <button class="botao mt-md">Ver Detalhes</button>
+      </section>
 
-    <section class="produto-card">
-      <h2>Contato</h2>
-      <address>
-        <p>Endereço: Rua Passagem Bingo, 123 - Bairro Bela Vista - São Paulo/SP</p>
-        <p>Telefone: (11) 00000-0000</p>
-        <p>E-mail: <a href="mailto:contato@contato.com">contato@contato.com</a></p>
-      </address>
-    </section>
+      <section class="produto-card col-span-12 col-span-md-6 col-span-lg-4">
+        <h2>Como Participar</h2>
+        <p>
+          Se você deseja se envolver com nossos projetos, seja como voluntário ou participante, entre em contato
+          conosco através do formulário de cadastro na página
+          <a href="cadastro.html">Cadastro</a>.
+        </p>
+        <p>
+          Ou colabore com nosso projeto, fazendo uma <a href="donate.html">doação</a>.
+        </p>
+        <button class="botao botao-secondary mt-md">Seja Voluntário</button>
+      </section>
+
+      <section class="produto-card col-span-12 col-span-lg-4">
+        <h2>Contato</h2>
+        <address>
+          <p>Endereço: Rua Passagem Bingo, 123 - Bairro Bela Vista - São Paulo/SP</p>
+          <p>Telefone: (11) 00000-0000</p>
+          <p>E-mail: <a href="mailto:contato@contato.com">contato@contato.com</a></p>
+        </address>
+        <button class="botao" disabled>Enviar Mensagem (Indisponível)</button>
+      </section>
+    </div>
   </main>
 
 <footer>
   <p>&copy; 2025 Lucas Santos - universitario da Cruzeiro do sul</p>
 </footer>
-</body>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    menuToggle.addEventListener('change', function() {
+        this.setAttribute('aria-expanded', this.checked);
+    });
+</script>
 </html>

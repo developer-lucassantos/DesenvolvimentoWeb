@@ -1,0 +1,64 @@
+/* ========================================================= */
+/* Reset Básico e Estilos Globais */
+/* ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-background);
+    color: var(--color-neutral-dark);
+    /* Implementação do CSS Grid para a estrutura geral */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-bottom: var(--space-sm);
+    color: var(--color-neutral-dark);
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+
+p {
+    margin-bottom: var(--space-sm);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilitários de Acessibilidade */
+.sr-only { /* Screen Reader Only - Para esconder elementos visualmente mas mantê-los para leitores de tela */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

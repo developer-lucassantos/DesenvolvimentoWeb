@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja Voluntário</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <h1>Bem-Vindo a nossa ONG</h1>
+            
+            <input type="checkbox" id="menu-toggle" aria-controls="menu-horizontal-nav" aria-expanded="false" class="sr-only">
+            <label for="menu-toggle" class="hamburger-icon" aria-label="Abrir menu de navegação">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <nav class="menu-horizontal" id="menu-horizontal-nav">
+                <ul class="menu-lista">
+                    <li><a class="menu-link" href="index.html">Início</a></li>
+                    <li class="has-submenu">
+                        <a class="menu-link" href="#">Apoie</a>
+                        <ul class="submenu-lista">
+                            <li><a href="donate.html" class="menu-link">Doação</a></li>
+                            <li><a href="voluntario.html" class="menu-link">Voluntariado</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="menu-link" href="projeto.html">Projeto</a></li>
+                    <li><a class="menu-link" href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="produto-card">
+            <h2>Mude Vidas, Seja um Voluntário!</h2>
+            <p>
+                O voluntariado é o coração da nossa ONG. Se você tem tempo, talento e paixão por causas sociais, venha fazer parte da nossa equipe. 
+                Juntos, podemos criar um futuro melhor para os jovens da comunidade.
+            </p>
+            <div class="alert alert-info mt-lg">
+                <p>O primeiro passo é preencher o <a href="cadastro.html" class="alert-link">formulário de cadastro</a> e indicar seu interesse em ser voluntário.</p>
+            </div>
+        </section>
+
+        <section class="produto-card">
+            <h2>Áreas de Atuação</h2>
+            <p>Oferecemos diversas oportunidades, independentemente da sua experiência:</p>
+            
+            <div class="grid-12-col mt-md">
+                
+                <div class="col-span-12 col-span-md-6 col-span-lg-4">
+                    <div class="produto-card">
+                        <h3 class="tag tag-primary"><i class="fas fa-futbol"></i> Esportes e Lazer</h3>
+                        <p>Auxílio nas aulas de futebol, organização de jogos e atividades recreativas.</p>
+                        <span class="badge badge-primary">Futebol</span>
+                        <span class="badge badge-primary">Recreação</span>
+                    </div>
+                </div>
+
+                <div class="col-span-12 col-span-md-6 col-span-lg-4">
+                    <div class="produto-card">
+                        <h3 class="tag tag-secondary"><i class="fas fa-book-open"></i> Educação e Oficinas</h3>
+                        <p>Reforço escolar (Matemática, Português) e condução de oficinas de arte/cultura.</p>
+                        <span class="badge badge-secondary">Reforço Escolar</span>
+                        <span class="badge badge-secondary">Artesanato</span>
+                    </div>
+                </div>
+
+                <div class="col-span-12 col-span-md-6 col-span-lg-4">
+                    <div class="produto-card">
+                        <h3 class="tag tag-success"><i class="fas fa-bullhorn"></i> Administrativo e Marketing</h3>
+                        <p>Ajuda na captação de recursos, gestão de redes sociais e organização de eventos.</p>
+                        <span class="badge badge-success">Redes Sociais</span>
+                        <span class="badge badge-success">Captação</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="produto-card">
+            <h2>Requisitos Básicos</h2>
+            
+            <div class="grid-12-col">
+                <div class="col-span-12 col-span-lg-6">
+                    <ul>
+                        <li><i class="fas fa-check-circle" style="color: var(--color-success);"></i> Ter idade mínima de 18 anos.</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--color-success);"></i> Disponibilidade de no mínimo 4 horas semanais.</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--color-success);"></i> Compromisso com os valores da ONG.</li>
+                    </ul>
+                </div>
+                <div class="col-span-12 col-span-lg-6">
+                    <ul>
+                        <li><i class="fas fa-exclamation-triangle" style="color: var(--color-accent);"></i> É necessário apresentar atestado de antecedentes criminais.</li>
+                        <li><i class="fas fa-exclamation-triangle" style="color: var(--color-accent);"></i> Participar de uma entrevista de acolhimento.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="cadastro.html" class="botao mt-lg">Quero me Cadastrar como Voluntário</a>
+            <a href="projeto.html" class="botao botao-secondary mt-lg">Conhecer Mais Projetos</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lucas Santos - universitario da Cruzeiro do sul</p>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        menuToggle.addEventListener('change', function() {
+            this.setAttribute('aria-expanded', this.checked);
+        });
+    </script>
+</body>
+
+</html>
