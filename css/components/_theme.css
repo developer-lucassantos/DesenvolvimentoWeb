@@ -1,0 +1,29 @@
+/* css/components/_theme.css */
+
+/* 1. Estilo do Botão de Tema */
+.botao-tema {
+    background: none;
+    border: none;
+    color: var(--color-white); /* Cor do ícone */
+    font-size: var(--fs-lg);
+    cursor: pointer;
+    padding: var(--space-xs);
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed);
+}
+
+.botao-tema:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Definição das Cores do Modo Escuro */
+/* Quando o body tiver o atributo data-theme="dark" */
+body[data-theme="dark"] {
+    /* Invertemos as cores de fundo e texto */
+    --color-background: #121212;
+    --color-neutral-dark: #f5f5f5;
+    --color-neutral-medium: #bbbbbb;
+
+    /* O 'branco' dos cards vira um cinza escuro */
+    --color-white: #212121;
+}
