@@ -4,7 +4,7 @@
 
 :root {
     /* Paleta de Cores (Mínimo 8 cores) */
-    --color-primary: #1e88e5;       /* Azul (Principal - Inclusão/ONG) */
+    --color-primary: #1565c0;       /* Azul (Principal - Inclusão/ONG) */
     --color-secondary: #ffc107;     /* Âmbar (Secundária/Destaque - Atenção/Apoio) */
     --color-accent: #f44336;        /* Vermelho (Perigo/Erro/Destaque Negativo) */
     --color-info: #00bcd4;          /* Ciano (Informação) */

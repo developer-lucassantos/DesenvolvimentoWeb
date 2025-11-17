@@ -1,4 +1,4 @@
-
+// js/router.js
 import { templateInicio, templateDoacao, templateVoluntario, templateProjeto, templateCadastro } from './templates.js';
 import { validateForm } from './validation.js'; // Importa o validador
 
@@ -27,6 +27,18 @@ export function navigateTo(page) {
     } else {
         // Encontrou, injeta o HTML no app-root
         appRoot.innerHTML = templateFunction();
+    }
+
+    // ======================================================
+    // ✨ NOVA ADIÇÃO (Acessibilidade) ✨
+    //
+    // Após carregar o novo conteúdo, movemos o foco para ele.
+    // Procuramos o primeiro elemento com tabindex="-1" (nosso <h2>)
+    // dentro do 'appRoot' e o focamos.
+    // ======================================================
+    const newHeading = appRoot.querySelector('h2[tabindex="-1"]');
+    if (newHeading) {
+        newHeading.focus();
     }
 
     // ************* PONTO CRÍTICO *************

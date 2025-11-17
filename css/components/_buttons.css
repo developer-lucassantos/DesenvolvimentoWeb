@@ -25,13 +25,17 @@
 
 /* Estado: Hover */
 .botao:hover:not(:disabled), [type="submit"]:hover:not(:disabled) {
-    background-color: #1565c0; 
+    /* DE: background-color: #1565c0; */
+    /* PARA: (Esta é a cor que você usava para o active) */
+    background-color: #0d47a1; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Estado: Active */
 .botao:active:not(:disabled), [type="submit"]:active:not(:disabled) {
-    background-color: #0d47a1; 
+    /* DE: background-color: #0d47a1; */
+    /* PARA: (Uma nova cor, ainda mais escura) */
+    background-color: #0a3a82; 
     transform: translateY(1px);
 }
 

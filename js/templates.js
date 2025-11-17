@@ -8,7 +8,7 @@
 export function templateInicio() {
     return `
         <section class="produto-card">
-            <h2 class="h2">Quem somos</h2>
+            <h2 class="h2" tabindex="-1">Quem somos</h2>
             <p class="paragrafo-quemsomos">
                 <span class="tag tag-info">Organização Não Governamental</span>
                 Somos uma organização não governamental dedicada a promover a inclusão social, cidadania e qualidade de
@@ -68,7 +68,7 @@ export function templateInicio() {
 export function templateDoacao() {
     return `
         <section class="produto-card">
-            <h2>A sua doação transforma vidas</h2>
+            <h2 tabindex="-1">A sua doação transforma vidas</h2>
             <p>
                 Cada contribuição, grande ou pequena, é fundamental para manter nossos projetos de inclusão social, esporte e educação ativos.<br>
                 Com o seu apoio, podemos oferecer materiais esportivos, alimentação e bolsas de estudo para jovens em situação de vulnerabilidade.
@@ -131,7 +131,7 @@ export function templateDoacao() {
 export function templateVoluntario() {
     return `
         <section class="produto-card">
-            <h2>Mude Vidas, Seja um Voluntário!</h2>
+            <h2 tabindex="-1">Mude Vidas, Seja um Voluntário!</h2>
             <p>
                 O voluntariado é o coração da nossa ONG. Se você tem tempo, talento e paixão por causas sociais, venha fazer parte da nossa equipe. 
                 Juntos, podemos criar um futuro melhor para os jovens da comunidade.
@@ -209,7 +209,7 @@ export function templateProjeto() {
         <div class="grid-12-col"> 
 
             <section class="produto-card col-span-12 col-span-md-6 col-span-lg-4">
-                <h2>Projetos em Andamento</h2>
+                <h2 tabindex="-1">Projetos em Andamento</h2>
                 <p>
                 <span class="tag tag-primary">Esporte</span>
                 <span class="tag tag-secondary">Educação</span>
@@ -257,7 +257,7 @@ export function templateProjeto() {
 export function templateCadastro() {
     return `
         <div class="produto-card">
-            <h2>Cadastro de Voluntário/Participante</h2><br>
+            <h2 tabindex="-1">Cadastro de Voluntário/Participante</h2><br>
             <p>Por favor, preencha o formulário abaixo para se cadastrar em nossa ONG. Todos os campos são obrigatórios.</p><br>
             
             <div class="alert alert-info mb-lg">
