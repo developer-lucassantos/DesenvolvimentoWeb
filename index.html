@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Início</title> <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -22,80 +21,30 @@
 
             <nav class="menu-horizontal" id="menu-horizontal-nav">
                 <ul class="menu-lista">
-                    <li><a class="menu-link" href="index.html">Início</a></li>
+                    <li><a class="menu-link" href="#inicio" data-page="inicio">Início</a></li>
                     <li class="has-submenu">
                         <a class="menu-link" href="#">Apoie</a>
                         <ul class="submenu-lista">
-                            <li><a href="donate.html" class="menu-link">Doação</a></li>
-                            <li><a href="voluntario.html" class="menu-link">Voluntariado</a></li>
+                            <li><a href="#doacao" class="menu-link" data-page="doacao">Doação</a></li>
+                            <li><a href="#voluntario" class="menu-link" data-page="voluntario">Voluntariado</a></li>
                         </ul>
                     </li>
-                    <li><a class="menu-link" href="projeto.html">Projeto</a></li>
-                    <li><a class="menu-link" href="cadastro.html">Cadastro</a></li>
+                    <li><a class="menu-link" href="#projeto" data-page="projeto">Projeto</a></li>
+                    <li><a class="menu-link" href="#cadastro" data-page="cadastro">Cadastro</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <main class="container" id="app-root">
+        </main>
 
-    <main class="container">
-
-        <section class="produto-card">
-            <h2 class="h2">Quem somos</h2>
-            <p class="paragrafo-quemsomos">
-                <span class="tag tag-info">Organização Não Governamental</span>
-                Somos uma organização não governamental dedicada a promover a inclusão social, cidadania e qualidade de
-                vida por meio do esporte e da educação.
-                Acreditamos que o esporte é uma poderosa ferramenta de
-                transformação, capaz de inspirar valores como respeito, disciplina, solidariedade e trabalho em equipe.
-            </p>
-            <div class="foto-voluntatios">
-                <picture class="col-span-6">
-                    <source srcset="imagens/voluntarios.webp" type="image/webp">
-                    <img src="imagens/voluntarios.jpeg"  alt="imagem de pessoas ligadas à ONG" width="500" height="400"
-                        class="foto">
-                </picture>
-                <picture class="col-span-6">
-                    <source srcset="imagens/projeto.webp" type="image/webp">
-                    <img src="imagens/projeto.webp" alt="imagem de pessoas ligadas à ONG" width="500" height="400"
-                        class="foto">
-                </picture>
-            </div>
-        </section>
-
-        <section class="produto-card2">
-            <h2>Nossa Missão</h2>
-            <p>
-                Nossa Missão é afastar jovens de atos criminosos reeducando-os atráves do Esporte e oficinas que visam
-                resgatar jovens desorientados e sem plano familiar, conciêntizando-os do que é certo e errado muitas
-                vezes até mesmo dando uma nova perspectiva de futuro através de novas profissões.
-            </p>
-            <div class="icones">
-                <span class="badge badge-danger">Drogas</span>
-                <span class="badge badge-danger">Álcool</span>
-                <span class="badge badge-danger">Fumo</span>
-                <img src="imagens/alcool.png" alt="imagem simbolica" class="icons d-none-lg">
-                <img src="imagens/smoke.png" alt="imagem simbolica" class="icons d-none-lg">
-                <img src="imagens/drugs.png" alt="imagem simbolica" class="icons d-none-lg">
-            </div>
-            
-            <div class="alert alert-success mt-lg">
-                <p>Junte-se a nós! Clique em <a href="cadastro.html" class="alert-link">Cadastro</a> para saber mais.</p>
-            </div>
-        </section>
-
-        <section class="produto-card3">
-            <h2>Contato</h2>
-            <address>
-                <p>Endereço: Rua Passagem Bingo, 123 - Bairro Bela Vista - São Paulo/SP</p>
-                <p>Telefone: (11)00000-0000</p>
-                <p>Email: contato@contato.com </p>
-            </address>
-        </section>
-    </main>
     <footer>
         <p>&copy; 2025 Lucas Santos - universitario da Cruzeiro do sul</p>
     </footer>
+
+    <script type="module" src="js/app.js"></script>
+
     <script>
         const menuToggle = document.getElementById('menu-toggle');
         menuToggle.addEventListener('change', function() {

@@ -81,3 +81,10 @@
     color: inherit; 
     opacity: 0.8;
 }
+
+.error-message {
+    color: var(--color-accent);
+    font-size: var(--fs-sm);
+    display: block;
+    margin-top: var(--space-xs);
+}
