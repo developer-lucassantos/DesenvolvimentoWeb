@@ -1,56 +1,237 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title> <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Athos Desenvolvimento Web - aplicativos e sistemas para delivery, PDV e gestão comercial." />
+  <title>Athos Desenvolvimento Web | Sistemas para Delivery e PDV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#inicio" class="brand">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span class="brand-text">Athos Desenvolvimento Web</span>
+      </a>
 
-    <header class="header">
-        <div class="container header-content">
-            <h1>Bem-Vindo a nossa ONG</h1>
-            
-            <input type="checkbox" id="menu-toggle" aria-controls="menu-horizontal-nav" aria-expanded="false" class="sr-only">
-            <label for="menu-toggle" class="hamburger-icon" aria-label="Abrir menu de navegação">
-                <i class="fas fa-bars"></i>
-            </label>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-            <nav class="menu-horizontal" id="menu-horizontal-nav">
-                <ul class="menu-lista">
-                    <li><a class="menu-link" href="#inicio" data-page="inicio">Início</a></li>
-                    <li class="has-submenu">
-                        <a class="menu-link" href="#">Apoie</a>
-                        <ul class="submenu-lista">
-                            <li><a href="#doacao" class="menu-link" data-page="doacao">Doação</a></li>
-                            <li><a href="#voluntario" class="menu-link" data-page="voluntario">Voluntariado</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="menu-link" href="#projeto" data-page="projeto">Projeto</a></li>
-                    <li><a class="menu-link" href="#cadastro" data-page="cadastro">Cadastro</a></li>
-                </ul>
-            </nav>
+      <nav id="site-menu" class="site-menu">
+        <a href="#solucoes">Soluções</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato" class="btn btn-sm">Falar no WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Tecnologia para operação de delivery</span>
+          <h1>Aplicativos e sistemas para delivery com PDV moderno, simples e eficiente.</h1>
+          <p>
+            A Athos Desenvolvimento Web cria soluções digitais para negócios que querem vender mais,
+            organizar pedidos, agilizar atendimento e ter mais controle da operação.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contato">Solicitar apresentação</a>
+            <a class="btn btn-secondary" href="#solucoes">Ver soluções</a>
+          </div>
+
+          <ul class="hero-points">
+            <li>PDV para delivery</li>
+            <li>Aplicativo personalizado</li>
+            <li>Gestão de pedidos e atendimento</li>
+          </ul>
         </div>
-    </header>
 
-    <main class="container" id="app-root">
-        </main>
+        <div class="hero-card">
+          <div class="dashboard-window">
+            <div class="window-bar">
+              <span></span><span></span><span></span>
+            </div>
 
-    <footer>
-        <p>&copy; 2025 Lucas Santos - universitario da Cruzeiro do sul</p>
-    </footer>
+            <div class="dashboard-content">
+              <div class="dashboard-sidebar">
+                <div class="sidebar-item active">Pedidos</div>
+                <div class="sidebar-item">Cardápio</div>
+                <div class="sidebar-item">Clientes</div>
+                <div class="sidebar-item">Relatórios</div>
+              </div>
 
-    <script type="module" src="js/app.js"></script>
+              <div class="dashboard-main">
+                <div class="stats">
+                  <div class="stat-box">
+                    <strong>127</strong>
+                    <span>Pedidos hoje</span>
+                  </div>
+                  <div class="stat-box">
+                    <strong>R$ 4.860</strong>
+                    <span>Faturamento</span>
+                  </div>
+                  <div class="stat-box">
+                    <strong>18 min</strong>
+                    <span>Tempo médio</span>
+                  </div>
+                </div>
 
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        menuToggle.addEventListener('change', function() {
-            this.setAttribute('aria-expanded', this.checked);
-        });
-    </script>
+                <div class="orders">
+                  <div class="order-item">
+                    <div>
+                      <strong>#1024</strong>
+                      <p>Hambúrguer + fritas + refrigerante</p>
+                    </div>
+                    <span class="status orange">Em preparo</span>
+                  </div>
+
+                  <div class="order-item">
+                    <div>
+                      <strong>#1025</strong>
+                      <p>Pizza grande + borda recheada</p>
+                    </div>
+                    <span class="status green">Saiu para entrega</span>
+                  </div>
+
+                  <div class="order-item">
+                    <div>
+                      <strong>#1026</strong>
+                      <p>Açaí 700ml + adicionais</p>
+                    </div>
+                    <span class="status blue">Pago online</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solucoes">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Soluções</span>
+          <h2>O que a Athos entrega para o seu negócio</h2>
+          <p>Projetos pensados para restaurantes, lanchonetes, pizzarias, hamburguerias e operações de delivery em geral.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>PDV para delivery</h3>
+            <p>Controle de pedidos, caixa, produção, balcão e entregas em uma operação mais organizada.</p>
+          </article>
+
+          <article class="card">
+            <h3>Aplicativo próprio</h3>
+            <p>Seu negócio com identidade própria, cardápio digital e experiência mais profissional para o cliente.</p>
+          </article>
+
+          <article class="card">
+            <h3>Painel administrativo</h3>
+            <p>Gerencie produtos, promoções, pedidos, horários e desempenho do negócio com mais clareza.</p>
+          </article>
+
+          <article class="card">
+            <h3>Integração operacional</h3>
+            <p>Centralização do fluxo de atendimento para reduzir erros e acelerar a rotina da equipe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="beneficios">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Benefícios</span>
+          <h2>Mais controle, velocidade e presença digital</h2>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit">
+            <strong>Atendimento mais rápido</strong>
+            <p>Pedidos mais organizados e menos retrabalho no dia a dia.</p>
+          </div>
+          <div class="benefit">
+            <strong>Operação mais profissional</strong>
+            <p>Seu negócio passa a contar com uma solução pensada para vender e escalar.</p>
+          </div>
+          <div class="benefit">
+            <strong>Melhor experiência do cliente</strong>
+            <p>Navegação simples, pedido facilitado e mais confiança na marca.</p>
+          </div>
+          <div class="benefit">
+            <strong>Base para crescimento</strong>
+            <p>Mais visão sobre o negócio para tomar decisões com mais segurança.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about-grid">
+        <div>
+          <span class="eyebrow">Sobre a empresa</span>
+          <h2>Athos Desenvolvimento Web</h2>
+          <p>
+            Somos uma empresa focada em criar soluções digitais para negócios que precisam de presença online,
+            automação comercial e ferramentas que realmente ajudem a operação.
+          </p>
+          <p>
+            Desenvolvemos projetos com foco em visual profissional, usabilidade, performance e conversão.
+          </p>
+        </div>
+
+        <div class="about-panel">
+          <div class="about-item">
+            <strong>Foco principal</strong>
+            <span>Aplicativos para delivery e sistemas PDV</span>
+          </div>
+          <div class="about-item">
+            <strong>Perfil dos projetos</strong>
+            <span>Soluções sob medida para negócios locais e operações em crescimento</span>
+          </div>
+          <div class="about-item">
+            <strong>Objetivo</strong>
+            <span>Vender mais com tecnologia simples, útil e bem apresentada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="contato">
+      <div class="container cta-box">
+        <div>
+          <span class="eyebrow">Contato</span>
+          <h2>Quer apresentar seu projeto ou conhecer uma solução da Athos?</h2>
+          <p>Entre em contato e veja como um sistema para delivery pode profissionalizar sua operação.</p>
+        </div>
+
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+          <a class="btn btn-secondary" href="mailto:contato@athos.dev">Enviar e-mail</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Athos Desenvolvimento Web. Todos os direitos reservados.</p>
+      <p>Site institucional para apresentação de soluções digitais e sistemas para delivery.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
